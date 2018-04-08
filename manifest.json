@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Deduplicate Tabs",
+  "version": "0.1",
+
+  "description": "Ensures that for each window, for any URL of interest, there is at most one tab with that URL.  URLs of interest are defined by providing regular expressions to match those URLs.",
+
+  "background": {
+    "scripts": ["listeners.js"]
+  },
+  "permissions": [
+    "tabs"
+  ]
+}

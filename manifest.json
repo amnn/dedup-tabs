@@ -5,6 +5,13 @@
 
   "description": "Ensures that for each window, for any URL of interest, there is at most one tab with that URL.  URLs of interest are defined by providing regular expressions to match those URLs.",
 
+  "applications": {
+    "gecko": {
+      "id": "{34b228df-0303-4937-8b13-7f5e997ac62b}",
+      "strict_min_version": "53.0"
+    }
+  },
+
   "background": {
     "scripts": ["listeners.js"]
   },

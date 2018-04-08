@@ -1,18 +1,19 @@
-const PATTERNS = [
-  new RegExp("example.com")
-];
-
 function deduplicateTab(tab) {
-  for (pattern of PATTERNS) {
-    if (tab.url.search(pattern) !== -1) {
-      return browser.tabs
-        .query({windowId: tab.windowId, url: tab.url})
-        .then((similarTabs) => browser.tabs.remove(
-          similarTabs.map((t) => t.id).filter((id) => id !== tab.id)));
-    }
-  }
+  return browser.storage.sync
+    .get("patterns")
+    .then((kvps) => {
+      for (pattern of kvps["patterns"]) {
+        if (tab.url.search(pattern) !== -1) {
+          return browser.tabs
+            .query({windowId: tab.windowId, url: tab.url})
+            .then((similarTabs) => browser.tabs.remove(
+              similarTabs.map((t) => t.id).filter((id) => id !== tab.id)));
+        }
+      }
 
-  return Promise.resolve();
+      return Promise.resolve();
+    });
+
 }
 
 browser.tabs.onAttached.addListener((id, attachInfo) => {

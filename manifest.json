@@ -8,6 +8,12 @@
   "background": {
     "scripts": ["listeners.js"]
   },
+
+  "options_ui": {
+    "page": "options.html",
+    "browser_style": true
+  },
+
   "permissions": [
     "tabs"
   ]

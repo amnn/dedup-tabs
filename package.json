@@ -1,0 +1,16 @@
+{
+  "name": "reactextension",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.7.1"
+  },
+  "scripts": {
+    "build": "echo 'Build'",
+    "watch": "watch -n 1 echo 'Watch'"
+  }
+}

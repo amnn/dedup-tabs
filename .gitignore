@@ -1,5 +1,8 @@
 \#*\#
 yarn-error.log
 .cache/
+.merlin
 node_modules/
 dist/
+lib/
+*.bs.js

@@ -1,0 +1,5 @@
+#! /bin/sh
+
+cp public/manifest.json dist/manifest.json
+parcel build src/Options.html --out-file options
+parcel build src/Listeners.js --out-file listeners

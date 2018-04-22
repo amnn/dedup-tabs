@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import ReactDOM from 'react-dom';
 import './Options.css';
 
 class Options extends Component {
@@ -12,4 +12,5 @@ class Options extends Component {
   }
 }
 
-export default Options;
+const mount = document.getElementById("root");
+ReactDOM.render(<Options />, mount);
